@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center>Q-min</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h5 text-center>Welcome</h5>
+
+
+  <ion-list class="center">
+    <ion-item>
+      <ion-label position="floating">email address</ion-label>
+      <ion-input [(ngModel)]="l_email" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input [(ngModel)]="l_password" type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-button class="center" expand="full" shape="round" color="light" (click)="login()">
+    Login
+    <ion-icon slot=end name="arrow-round-forward"></ion-icon>
+  </ion-button>
+
+  <p text-center>or login using</p>
+  <ion-row>
+    <ion-col size="6">
+      <ion-button (click)="loginWithGoogle()" shape="round" color="danger" class="center">
+        <ion-icon name="logo-googleplus"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button shape="round" class="center">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-button>
+    </ion-col>
+
+  </ion-row>
+
+  <p text-center> Create an account <a (click)="navSignup()">register</a></p>
+
+</ion-content>

@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center>Q-min</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <h5 text-center>Register</h5>
+
+
+  <ion-list class="center">
+    <ion-item>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input [(ngModel)]="l_name" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">email address</ion-label>
+      <ion-input [(ngModel)]="l_email" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input [(ngModel)]="l_password" type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input [(ngModel)]="l_con_password" type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-button class="center" expand="full" shape="round" color="light" (click)="signup()">
+    Register
+    <ion-icon slot=end name="arrow-round-forward"></ion-icon>
+  </ion-button>
+
+
+
+
+
+
+
+
+
+
+
+</ion-content>
