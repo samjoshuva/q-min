@@ -38,6 +38,7 @@ export class LoginPage implements OnInit {
         this.user = result.additionalUserInfo;
 
         this.storage.set('user-info', this.user);
+        this.router.navigate(['/tabs']);
       })
       .catch(err => {
         this.util.presentToast(err.message);
@@ -56,6 +57,8 @@ export class LoginPage implements OnInit {
         console.log(this.user);
 
         this.storage.set('user-info', this.user);
+
+        this.router.navigate(['/tabs']);
 
         // if (this.user.isNewUser) {
         //   this.util.presentToast('Account created ');
