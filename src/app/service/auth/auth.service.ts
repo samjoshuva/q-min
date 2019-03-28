@@ -24,6 +24,7 @@ export class AuthService {
   }
 
   loginWithGoogle() {
+    // this.afAuth.auth.signIn
     return this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
   }
   logout() {
