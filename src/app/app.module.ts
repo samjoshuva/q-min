@@ -16,7 +16,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { IonicStorageModule } from '@ionic/storage';
 
-import { GooglePlus } from '@ionic-native/google-plus/npx';
+import { GooglePlus } from '@ionic-native/google-plus/ngx';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -26,6 +27,7 @@ import { GooglePlus } from '@ionic-native/google-plus/npx';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
+    AngularFirestoreModule,
     IonicStorageModule.forRoot()
   ],
   providers: [

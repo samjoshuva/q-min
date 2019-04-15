@@ -17,7 +17,7 @@
     </ion-item>
     <ion-item>
       <ion-label position="floating">email address</ion-label>
-      <ion-input [(ngModel)]="l_email" type="text"></ion-input>
+      <ion-input [(ngModel)]="l_email" type="email"></ion-input>
     </ion-item>
 
     <ion-item>
@@ -26,8 +26,22 @@
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Password</ion-label>
+      <ion-label position="floating">Confim Password</ion-label>
       <ion-input [(ngModel)]="l_con_password" type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Date of Birth</ion-label>
+      <ion-datetime [(ngModel)]="dob" display-format="MMM DD YYYY "></ion-datetime>
+    </ion-item>
+    <ion-item>
+
+      <ion-label>Sex</ion-label>
+      <ion-select [(ngModel)]="sex" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="male">Male</ion-select-option>
+        <ion-select-option value="female">Female</ion-select-option>
+        <ion-select-option value="other">Other</ion-select-option>
+      </ion-select>
+
     </ion-item>
   </ion-list>
 

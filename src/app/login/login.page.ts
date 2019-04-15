@@ -30,19 +30,7 @@ export class LoginPage implements OnInit {
   ngOnInit() {}
 
   login() {
-    this.auth
-      .loginWithEmail(this.l_email, this.l_password)
-      .then(result => {
-        console.log(result.additionalUserInfo);
-
-        this.user = result.additionalUserInfo;
-
-        this.storage.set('user-info', this.user);
-        this.router.navigate(['/tabs']);
-      })
-      .catch(err => {
-        this.util.presentToast(err.message);
-      });
+    this.auth.loginWithEmail(this.l_email, this.l_password);
   }
 
   navSignup() {
@@ -51,21 +39,21 @@ export class LoginPage implements OnInit {
 
   loginWithGoogle() {
     this.auth
-      .loginWithGoogle()
+      .webGoogleLogin()
       .then(data => {
         this.user = data.additionalUserInfo;
-        console.log(this.user);
+        alert(this.user);
 
         this.storage.set('user-info', this.user);
 
-        this.router.navigate(['/tabs']);
+        this.router.navigate(['/home']);
 
         // if (this.user.isNewUser) {
         //   this.util.presentToast('Account created ');
         // }
       })
       .catch(err => {
-        this.util.presentToast(err.message);
+        alert(err.message);
       });
   }
 }

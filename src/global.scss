@@ -12,13 +12,29 @@
 
 
 ion-content {
-   background: rgb(238, 238, 238);
+   background: rgb(252, 246, 239);
+
 }
 
 ion-header {
    z-index: 0 !important;
+
+}
+
+ion-footer {
+   z-index: 0 !important;
+   position: unset !important;
 }
 
 ion-card {
-   border-radius: 25px !important;
+   border-radius: 10px !important;
+}
+
+ion-badge {
+   border-radius: 1000px !important;
+}
+
+ion-title {
+   font-size: 25px;
+   font-weight: bold;
 }
